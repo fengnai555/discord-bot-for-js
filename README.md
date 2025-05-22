@@ -12,12 +12,10 @@
 4. 確保已安裝 [nvm](https://github.com/coreybutler/nvm-windows)
 5. 安裝相關依賴
 
-```
-
+```bash
 git clone https://github.com/fengnai555/discord-bot-for-js.git
 cd discord-bot-for-js
 npm install
 npm start
-
 ```
 
