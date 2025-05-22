@@ -7,15 +7,16 @@
 
 ## 🔧 安裝步驟
 1. node.js 版本需為 v22 或以上，請參考 [Node.js 官方網站](https://nodejs.org/) 下載安裝。
-2. 確保已安裝 [yarn](https://yarnpkg.com/)。
-3. 確保已安裝 [git](https://git-scm.com/)。
-4. 確保已安裝 [nvm](https://github.com/coreybutler/nvm-windows)
-5. 安裝相關依賴
+2. 安裝 [yarn](https://yarnpkg.com/)
+3. 安裝 (可選) [nvm](https://github.com/coreybutler/nvm-windows)
+4. 安裝相關依賴
+[discord.js]
+[fast-glob]
+[vite-node]
+[dotenv]
+[pinia]
+[vue]
 
 ```bash
-git clone https://github.com/fengnai555/discord-bot-for-js.git
-cd discord-bot-for-js
-npm install
-npm start
+yarn app discord.js fast-glob vite-node dotenv pinia vue
 ```
-
