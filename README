@@ -16,3 +16,4 @@ git clone https://github.com/fengnai555/discord-bot-for-js.git
 cd discord-bot-for-js
 npm install
 npm start
+```
