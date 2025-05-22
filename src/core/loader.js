@@ -15,7 +15,6 @@ const updateSlashCommands = async (commands) => {
         }
     )
 
-    // console.log('更新指令:', result);
 }
 
 export const loadCommands = async () => {
@@ -26,7 +25,6 @@ export const loadCommands = async () => {
     const files = await fg('src/commands/**/index.js');
     for (const file of files) {
         const cmd = await import(file);
-        // console.log('載入指令:', cmd.command);
 
         commands.push(cmd.command);
         actions.set(cmd.command.name, cmd.action);
@@ -64,43 +62,3 @@ export const loadEvents = async () => {
         }
     }
 }
-
-// export const loadEvents = async () => { 
-//     try {
-//         const appStore = useAppStore();
-//         const bot = appStore.bot;
-        
-//         if (!bot) {
-//             throw new Error('Bot 實例未初始化');
-//         }
-
-//         const files = await fg('src/events/**/index.js');
-//         console.log('找到的事件檔案:', files);
-
-//         for (const file of files) {
-//             try {
-//                 const eventModule = await import(file);
-                
-//                 if (eventModule.event) {
-//                     const eventName = typeof eventModule.event === 'string' 
-//                         ? eventModule.event 
-//                         : eventModule.event.name || '未知事件';
-                        
-//                     if (eventModule.once) {
-//                         bot.once(eventModule.event, eventModule.action);
-//                     } else {
-//                         bot.on(eventModule.event, eventModule.action);
-//                     }
-//                     console.log(`已載入事件: ${eventName} (${eventModule.once ? 'once' : 'on'})`);
-//                 }
-//             } catch (error) {
-//                 console.error(`載入事件 ${file} 時發生錯誤:`, error);
-//             }
-//         }
-        
-//         console.log('事件載入完成');
-//     } catch (error) {
-//         console.error('載入事件過程發生錯誤:', error);
-//         throw error;
-//     }
-// };
