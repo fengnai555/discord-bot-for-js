@@ -22,3 +22,11 @@
 ```bash
 yarn add discord.js fast-glob vite-node dotenv pinia vue
 ```
+
+## 🧪 測試與執行
+
+使用以下指令啟動 Bot：
+
+```bash
+yarn dev
+```
